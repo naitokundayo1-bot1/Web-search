@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Search</title>
+</head>
+
+<body>
+  <h1>🌐 Web Search</h1>
+
+  <input id="search" placeholder="検索...">
+  <button onclick="search()">検索</button>
+
+  <script>
+    function search() {
+      const q = document.getElementById("search").value.trim();
+
+      if (q) {
+        location.href =
+          "https://www.google.com/search?q=" + encodeURIComponent(q);
+      }
+    }
+  </script>
+</body>
+</html>
